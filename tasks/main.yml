@@ -7,6 +7,11 @@
     name:
     - hostapd
     state: latest
+  register: unmask_hostapd
+
+- name: UNMASK hostapd
+  shell: systemctl unmask hostapd
+  when: unmask_hostapd.changed
 
 - name: Copy hostapd config
   template:
