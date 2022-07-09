@@ -1,0 +1,5 @@
+---
+# defaults file for hostapd
+hostapd_interface: "wlan0"
+hostapd_channel: "11"
+hostapd_wpa_passphrase: "12345678"

@@ -1,0 +1,15 @@
+---
+# tasks file for hostapd
+- name: Install useful packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    name:
+    - hostapd
+    state: latest
+
+- name: Copy hostapd config
+  template:
+    src: hostapd.conf.j2
+    dest: /etc/hostapd/hostapd.conf
+  notify: Restart hostapd

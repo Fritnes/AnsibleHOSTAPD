@@ -1,0 +1,8 @@
+---
+# handlers file for hostapd
+  - name: Restart hostapd
+    systemd:
+      state: restarted
+      enabled: yes
+      daemon_reload: yes
+      name: "hostapd"
