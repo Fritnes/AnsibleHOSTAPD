@@ -5,4 +5,5 @@
       state: restarted
       enabled: yes
       daemon_reload: yes
+      masked: no  
       name: "hostapd"
